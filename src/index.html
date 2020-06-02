@@ -3,60 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/journal.css">
     <title>Amanda's Daily Journal</title>
-    <link rel="stylesheet" type="text/css" href="styles/journal.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- begin Navbar -->
-    <nav>
-        <ul class="navBar">
-            <li class="nav-bar"><a href="#">Home</a></li>
-            <li class="nav-bar"><a href="#">Past Entries</a></li>
-            <li class="nav-bar"><a href="#">About Me</a></li>
-            <li class="nav-bar"><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <!-- end nav bar -->
-    <!-- date concepts mood and submit should align to left with entry form to right of it -->
-    <div class="bio">
-        <h1>Amanda's Daily Journal</h1>
-        <p>Just a place to keep daily thoughts on how classes are going!</p>
-    </div>
-    <div class="wrapper">
-    <div class="mainForm">
-        <form action="">
-                <fieldset>
-                    <label for="journalDate">Date of Entry</label>
-                    <input type="date" name="journalDate" id="journalDate">
-                     <label for="conceptsCovered">Concepts Covered</label>
-                     <input type="text" name="conceptsCovered" id="conceptsCovered">
-                     <label for="mood">Mood for the day</label>
-                    <select name="Mood" id="mood">
-                    <option value="Confused">Confused</option>
-                    <option value="Godlike">Godlike</option>
-                    <option value="SadPanda">Sad Panda</option>
-                    <option value="GrumpyCat">Grumpy Cat</option>
-                    </select>
-            </fieldset>
-        </form>
-    </div>
-    <div class="submit">
-        <form action="">
-            <input type="submit" value="Record Journal Entry">
-        </form>
-    </div>
-    <div class="journalInput">
-        <form action="">
-            <fieldset>
-                <label for="journalEntry">Journal Entry</label>
-                <textarea rows="10" cols="75" id="journalEntry"></textarea>
-            </fieldset>
-        </form>
-    </div>
-    </div>
-    <footer>
-
-    </footer>
+ <main class="container">
+     <div class="banner">
+         <div class="">
+             <img class="banner__logo" src="https://www.shareicon.net/data/256x256/2015/09/08/97874_blog_512x512.png" alt="blog image"/>
+         </div>
+         <div class="banner__title">Amanda's Daily Journal</div>
+     </div>
+     <div class="underTheBanner">
+         <div class="underTheBanner__left">
+             <div class="threeList">
+                <form action="">
+                        <label for="journalDate">Date of Entry</label>
+                        <input type="date" name="journalDate" id="journalDate">
+                </form>
+                <form action="">
+                         <label for="conceptsCovered">Concepts Covered</label>
+                         <input type="text" name="conceptsCovered" id="conceptsCovered">
+                </form>
+                <form action="">
+                         <label for="mood">Mood for the day</label>
+                        <select name="Mood" id="mood">
+                        <option value="Confused">Confused</option>
+                        <option value="Godlike">Godlike</option>
+                        <option value="SadPanda">Sad Panda</option>
+                        <option value="GrumpyCat">Grumpy Cat</option>
+                        </select>
+                </form>   
+             </div>
+         </div>
+         <div class="underTheBanner__right">
+          <div class="journalEntry">
+            <form action="">
+                    <label for="journalEntry"></label>
+                    <textarea rows="30" cols="130" id="journalEntry"></textarea>
+            </form>
+            <form acion="">
+                    <input type="submit" value="Record Journal Entry">
+            </form>
+          </div>   
+         </div>
+     </div>
+ </main> 
+ <script src="/scripts/journal.js"></script>  
 </body>
 </html>

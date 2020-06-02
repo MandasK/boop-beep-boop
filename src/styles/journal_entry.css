@@ -1,0 +1,10 @@
+.journalEntry {
+    display: flex;
+    flex-direction: row;
+    
+}
+form, .journalEntry {
+   align-content: flex-start; 
+}
+
+
