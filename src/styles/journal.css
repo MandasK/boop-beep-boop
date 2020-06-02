@@ -6,20 +6,29 @@
 .container {
     display: flex;
     flex-direction: column;
+    font-family: 'Merriweather', serif;
+    
 }
 
 .underTheBanner {
     display: flex;
     flex-direction: row;
+    
 }
 
 .underTheBanner__left {
     display: flex;
     flex-direction: column;
     flex: 1;
+    margin-top: .25em;
+    background-color: #F2F2F2;
 }
 .underTheBanner__right {
     display: flex;
     flex-direction: column;
-    flex: 3.75;
+    flex: 3;
+    margin-top: .25em;
+    background-color: #7B84DB;
 }
+
+

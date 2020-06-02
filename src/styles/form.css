@@ -4,4 +4,39 @@
     flex-direction: column;
     align-content: flex-start;
     padding-bottom: 3em;
+    
+}
+
+.threeList > form {
+    border: 2px solid black;
+    border-radius:5px;
+    margin: 2em;
+    padding: 1em;
+    background-color: #F2F2F2;
+}
+
+
+input[type=date]  {
+    background-color: #F2F2F2;
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:5px;
+    font-family: 'Merriweather', serif;
+}
+input[type=text]  {
+    background-color: #F2F2F2;
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:5px;
+    font-family: 'Merriweather', serif;
+}
+select[name=Mood]  {
+    background-color: #F2F2F2;
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:5px;
+    font-family: 'Merriweather', serif;
 }
