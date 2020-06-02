@@ -3,8 +3,27 @@
     flex-direction: row;
     
 }
-form, .journalEntry {
-   align-content: flex-start; 
+
+
+.submitButton {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:5px;
+    font-family: 'Merriweather', serif;
+
 }
 
-
+textarea {
+    width: 93%;
+    height: auto;
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    margin: 40px 40px 20px 40px;
+    background-color: #F2F2F2;
+    border-radius:5px;
+    font-family: 'Merriweather', serif;
+}

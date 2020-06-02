@@ -1,11 +1,11 @@
-.banner__logo {
-    max-width: 50px;
-    max-height: 50px;
-}
-
-
 .banner {
     display: flex;
     flex-direction: row;
-    font-size: 48px;
+    font-size: 45px;
+    background-color: #7B84DB;
+    
+}
+.banner__logo {
+    max-width: 50px;
+    max-height: 50px;
 }
