@@ -1,53 +1,25 @@
-* {
-    font-family: 'Roboto', sans-serif;
+
+@import "form.css";
+@import "journal_entry.css";
+@import "banner.css";
+
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
-
-.navBar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-.nav-bar {
-    float: left;
+.underTheBanner {
+    display: flex;
+    flex-direction: row;
 }
 
-.nav-bar a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+.underTheBanner__left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
-
-textarea  {
-    width: auto;
-    height: auto;
-}
-
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(1fr, 3fr);
-    grid-gap: 2px;
-    grid-auto-rows: minmax(100px, 100px);
-}
-
-.mainForm {
-    grid-column: 1;
-    grid-row: 1 / 3
-}
-
-.journalInput {
-    grid-column: 2;
-    grid-row: 1 / 4;
-    
-}
-
-
-.submit {
-    grid-column: 1;
-    grid-row: 4;
+.underTheBanner__right {
+    display: flex;
+    flex-direction: column;
+    flex: 3.75;
 }
