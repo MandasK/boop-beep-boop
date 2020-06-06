@@ -8,11 +8,11 @@
 
 
 
-getEntriesData().then(
-    () => {
-        renderJournalEntries(journalEntries)
-    }
-)
+// getEntriesData().then(
+//     () => {
+//         renderJournalEntries(journalEntries)
+//     }
+// )
 
-// API.getEntriesData().then(renderJournalEntries())
+API.getJournalEntries().then(() => renderJournalEntries())
 
