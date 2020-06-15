@@ -14,5 +14,9 @@
 //     }
 // )
 
-API.getJournalEntries().then(() => renderJournalEntries())
+import  API from './data.js'
+import renderJournalEntries from './entryList.js'
+
+API.getJournalEntries()
+    .then((response) => renderJournalEntries(response))
 
