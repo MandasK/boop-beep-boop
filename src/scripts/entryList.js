@@ -1,7 +1,8 @@
+import makeJournalEntryComponent from './entryComponent.js'
 
-const renderJournalEntries = () => {
+const renderJournalEntries = (allEntries) => {
     
-for (const entries of journalEntries) {
+for (const entries of allEntries) {
 
     const entriesHTML = makeJournalEntryComponent(entries)
 
@@ -12,5 +13,4 @@ for (const entries of journalEntries) {
 }
 }
 
-
-
+export default renderJournalEntries;
