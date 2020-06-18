@@ -18,13 +18,13 @@ const API = {
             .then(response => response.json());
     },
 
-    addAJournal (journalObject) {
+    saveJournalEntry (newEntryObject) {
         return fetch(`${url}/entries`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(journalObject)
+            body: JSON.stringify(newEntryObject)
         }).then(response => response.json())
     }
     
