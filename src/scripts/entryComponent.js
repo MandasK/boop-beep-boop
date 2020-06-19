@@ -1,8 +1,9 @@
-const makeJournalEntryComponent = (journalEntry) => {
+
     // Create your own HTML structure for a journal entry
 
-    const journalEntryHTMLRepresentation =
-     `<section class="entryLog__list">
+const journalEntryHTMLRepresentation = {
+    makeJournalEntryComponent (journalEntry) {
+    return `<section class="entryLog__list">
     <ul>
         <li>Date: ${journalEntry.date}</li>
         <li>Mood: ${journalEntry.mood}</li>
@@ -12,9 +13,7 @@ const makeJournalEntryComponent = (journalEntry) => {
     <section class="entrylog__entry">
     ${journalEntry.entry}
     </section>`
-
-    return journalEntryHTMLRepresentation
-
+}
 }
 
-export  default makeJournalEntryComponent;
+export  default journalEntryHTMLRepresentation;

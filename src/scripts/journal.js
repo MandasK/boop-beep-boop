@@ -1,22 +1,26 @@
-/*
-    Main application logic that uses the functions and objects
-    defined in the other JavaScript files.
-
-    Change the fake variable names below to what they should be
-    to get the data and display it.
-*/
-
-
-
-// getEntriesData().then(
-//     () => {
-//         renderJournalEntries(journalEntries)
-//     }
-// )
 
 import  API from './data.js'
-import renderJournalEntries from './entryList.js'
+import journalList from './entryList.js'
+import makeEntry from './createEntry.js'
 
-API.getJournalEntries()
-    .then((response) => renderJournalEntries(response))
+    API.getJournalEntries()
+    .then(() => journalList.renderJournalEntries())
+
+
+document.querySelector("#submitdammit").addEventListener("click", clickevent => {
+
+const dateInput = document.querySelector("#journalDate")
+const conceptsInput = document.querySelector("#conceptsCovered")
+const moodInput = document.querySelector("#mood")
+const entryInput = document.querySelector("#journalEntry")
+
+  if(dateInput.value !== "" && conceptsInput.value !== "" && moodInput.value !== "" && entryInput.value !== "") {
+    const newEntry = makeEntry(dateInput.value, conceptsInput.value, moodInput.value, entryInput.value)
+      API.saveJournalEntry(newEntry)
+    
+  } else { window.alert("You're piece of shit fill out the form!")
+         
+    }
+})
+
 
