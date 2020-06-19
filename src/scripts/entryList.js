@@ -1,16 +1,18 @@
-import makeJournalEntryComponent from './entryComponent.js'
+import API from "./data.js"
+import journalEntryHTMLRepresentation from './entryComponent.js'
 
-const renderJournalEntries = (allEntries) => {
-    
-for (const entries of allEntries) {
 
-    const entriesHTML = makeJournalEntryComponent(entries)
 
-    const entriesArticleElement = document.querySelector(".entryLog")
+const journalList = {
 
-    entriesArticleElement.innerHTML += entriesHTML
-    
+    renderJournalEntries (entries) {
+        document.querySelector(".entryLog").innerHTML = ""
+        for (const entry of API.journalEntries) {
+        const entryHTML = journalEntryHTMLRepresentation.makeJournalEntryComponent(entry)
+        document.querySelector(".entryLog").innerHTML += entryHTML
+        }
+    }
 }
-}
+    
 
-export default renderJournalEntries;
+export default journalList;
