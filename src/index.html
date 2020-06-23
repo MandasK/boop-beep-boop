@@ -19,6 +19,7 @@
          <div class="underTheBanner__left">
              <div class="threeList">
                 <form action="">
+                        <input type="hidden" id="entryId" value="" />
                         <label for="journalDate">Date of Entry</label>
                         <input type="date" name="journalDate" id="journalDate">
                 </form>
@@ -46,12 +47,25 @@
             <form class="submitButton" action="">
                     <input type="button" id= "submitdammit" value="Record Journal Entry">
             </form>
-          </div> 
-          <article class="entryLog">
-            
-        </article>
-     </div>  
-        
+          </div>   
+     <div class="entries">
+     <fieldset>
+        <legend>
+            <input type="radio" id="Confused" name="mood" value="Confused">
+            <label for="Confused">Confused</label>
+            <input type="radio" id="Godlike" name="mood" value="Godlike">
+            <label for="Godlike">Godlike</label>
+            <input type="radio" id="SadPanda" name="mood" value="SadPanda">
+            <label for="SadPanda">Sad Panda</label>
+            <input type="radio" id="GrumpyCat" name="mood" value="GrumpyCat">
+            <label for="GrumpyCat">Grumpy Cat</label>
+        </legend>
+    </fieldset>
+    <article class="entryLog">
+      
+  </article>       
+  </div>    
+  </div>
  </main> 
  <script type = "module" src="/scripts/journal.js"></script>  
  

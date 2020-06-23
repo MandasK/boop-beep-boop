@@ -1,6 +1,8 @@
 
     // Create your own HTML structure for a journal entry
 
+import journalList from "./entryList.js";
+
 const journalEntryHTMLRepresentation = {
     makeJournalEntryComponent (journalEntry) {
     return `<section class="entryLog__list">
@@ -12,6 +14,8 @@ const journalEntryHTMLRepresentation = {
     </section>
     <section class="entrylog__entry">
     ${journalEntry.entry}
+    <button id="editEntry--${journalEntry.id}">Edit</button>
+    <button id="deleteEntry--${journalEntry.id}">Delete</button>
     </section>`
 }
 }
