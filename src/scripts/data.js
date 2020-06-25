@@ -10,6 +10,7 @@ const API = {
             })
             .then (arrayOfEntries => {
                 this.journalEntries = arrayOfEntries
+                return arrayOfEntries
             })
     },
 

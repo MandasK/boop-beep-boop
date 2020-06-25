@@ -1,8 +1,6 @@
 
     // Create your own HTML structure for a journal entry
 
-import journalList from "./entryList.js";
-
 const journalEntryHTMLRepresentation = {
     makeJournalEntryComponent (journalEntry) {
     return `<section class="entryLog__list">

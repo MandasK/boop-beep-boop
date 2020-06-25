@@ -7,9 +7,8 @@ const showEntries = () => {
   document.querySelector(".entryLog").innerHTML = ""
   API.getJournalEntries()
     .then(() => journalList.renderJournalEntries())
+    
 }
-showEntries()
-makeEntry()
 
 const clearInputs = () => {
   document.querySelector("#entryId").value = ""
@@ -64,7 +63,38 @@ export default {
       }
     })
   }
+  
 }
+
+makeEntry()
+showEntries()
+
+let searchBar = document.querySelector("#searchBar")
+
+searchBar.addEventListener("keypress", event => {
+  
+  if (event.key === "Enter" && searchBar.value !== "") {
+    const searchTerm = event.target.value
+    let filteredSearch = ""
+    API.getJournalEntries()
+    .then(entries => {
+      filteredSearch = entries.filter(entries => entries.concepts.includes(`${searchTerm}`) || entries.mood.includes(`${searchTerm}` || entries.entry.includes(`${searchTerm}`)))
+      journalList.renderJournalEntries(filteredSearch)
+    })
+  }else {
+    console.log("no match")
+  }
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -79,6 +109,7 @@ export default {
 //           return filtered.mood === mood
 //         })
 //         journalList.renderJournalEntries(filteredEntry)
+//         searchElements.sortByObjectMaker()
 //   })
 
 // })
